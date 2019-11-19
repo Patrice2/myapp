@@ -1,21 +1,23 @@
 package nuigalway.app;
 
+import java.util.ArrayList;
+
 public class Student {
     private String name;
     private int age;
     private String DoB;
     private String id;
     private String username;
-    private CourseProgramme course;
-    private Module module;
+    private ArrayList<CourseProgramme> courses;
+    private ArrayList<Module> modules;
 
-    public Student(String name, int age, String DoB, String id, CourseProgramme course, Module module) {
+    public Student(String name, int age, String DoB, String id, ArrayList<CourseProgramme> courses, ArrayList<Module> modules) {
        this.name = name;
        this.age = age;
        this.DoB = DoB;
        this.id = id;
-       this.course = course;
-       this.module = module;
+       this.courses = courses;
+       this.modules = modules;
     }
 
     public void setName(String newName){
@@ -50,20 +52,20 @@ public class Student {
         return id;
     }
 
-    public void setCourseProgramme(CourseProgramme newCourse){
-        this.course = newCourse;
+    public void setCourseProgramme(ArrayList<CourseProgramme> newCourses){
+        this.courses = newCourses;
     }
 
-    public CourseProgramme getCourseProgramme(){
-        return course;
+    public ArrayList<CourseProgramme> getCourseProgramme(){
+        return courses;
     }
 
-    public void setModule(Module newModule){
-        this.module = newModule;
+    public void setModule(ArrayList<Module> newModules){
+        this.modules = newModules;
     }
 
-    public Module getModule(){
-        return module;
+    public ArrayList<Module> getModule(){
+        return modules;
     }
 
     public void setUsername(String newUsername){

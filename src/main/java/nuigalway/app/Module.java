@@ -1,12 +1,14 @@
 package nuigalway.app;
 
+import java.util.ArrayList;
+
 public class Module {
     private String name;
     private int id;
-    private Student[] students;
-    private CourseProgramme[] courses;
+    private ArrayList<Student> students;
+    private ArrayList<CourseProgramme> courses;
 
-    public Module(String name, int id, Student[] students, CourseProgramme[] courses){
+    public Module(String name, int id, ArrayList<Student> students, ArrayList<CourseProgramme> courses){
         this.name = name;
         this.id = id;
         this.students = students;
@@ -29,8 +31,13 @@ public class Module {
         return id;
     }
 
-    public Student[] addStudent(Student newStudent){
-        // add a student to the array
+    public ArrayList<Student> addStudent(Student newStudent){
+        students.add(newStudent);
         return students;
+    }
+
+    public ArrayList<CourseProgramme> addCourse(CourseProgramme newCourse){
+        courses.add(newCourse);
+        return courses;
     }
 }
