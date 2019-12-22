@@ -6,7 +6,7 @@ public class Module {
     //initialise all the variables
     private String name;
     private String id;
-    private ArrayList<Student> students = new ArrayList();
+    private ArrayList<Student> students;
     private ArrayList<CourseProgramme> courses = new ArrayList();
 
     //constructor option 1 all information
